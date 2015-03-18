@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RootViewController.h"
 
 @interface CustomCollectionViewCell : UICollectionViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *cellImageViewOutlet;

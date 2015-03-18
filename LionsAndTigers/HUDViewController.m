@@ -24,9 +24,12 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)onLionsButtonTapped:(id)sender {
+    [self.delegate lionButtonTapped:sender];
 }
 
 - (IBAction)onTigersButtonTapped:(id)sender {
+    [self.delegate tigerButtonTapped:sender];
+
 }
 
 /*

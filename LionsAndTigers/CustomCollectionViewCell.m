@@ -7,8 +7,12 @@
 //
 
 #import "CustomCollectionViewCell.h"
+#import "RootViewController.h"
 
 @implementation CustomCollectionViewCell
 
+-(void)tryinToGetData
+{
 
+}
 @end

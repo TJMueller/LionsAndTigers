@@ -7,9 +7,11 @@
 //
 
 #import "TopViewController.h"
+#import "CustomCollectionViewCell.h"
 
 @interface TopViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
-
+@property NSArray *lions;
+@property NSArray *tigers;
 @end
 
 @implementation TopViewController
@@ -17,6 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    self.lions = [NSArray arrayWithObjects:[UIImage imageNamed:@"Image-5"], [UIImage imageNamed:@"Image-4"], [UIImage imageNamed:@"Image-3"], nil];
+      self.tigers = [NSArray arrayWithObjects:[UIImage imageNamed:@"Image"], [UIImage imageNamed:@"Image-1"], [UIImage imageNamed:@"Image-2"], nil];
 }
 
 
@@ -44,9 +49,9 @@
     return 1;
 }
 // 3
-- (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor whiteColor];
+- (CustomCollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CustomCollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    
     return cell;
 }
 

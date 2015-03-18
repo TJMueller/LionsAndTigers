@@ -11,8 +11,9 @@
 @protocol HUDDelegate <NSObject>
 
 @optional
--(void)tigersButtonTapped:(id)identifier didTapButton:(UIButton *)button;
--(void)lionsButtonTapped:(id)identifier didTapButton:(UIButton *)button;
+-(void)tigerButtonTapped:(id)sender;
+-(void)lionButtonTapped:(id)sender;
+
 
 @end
 

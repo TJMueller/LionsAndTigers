@@ -37,6 +37,7 @@
 
     self.hvc = self.childViewControllers[0];
     self.hvc.delegate = self;
+    self.shouldIShowLions = false;
 
 
 //    NSLog(@"%lu",(unsigned long)self.childViewControllers.count);
@@ -64,5 +65,17 @@
     self.shouldShowHUDView =!self.shouldShowHUDView;
 
 }
+
+-(void)lionButtonTapped:(id)sender
+{
+    self.shouldIShowLions = true;
+}
+
+-(void)tigerButtonTapped:(id)sender
+{
+    self.shouldIShowLions = false;
+}
+
+
 
 @end
