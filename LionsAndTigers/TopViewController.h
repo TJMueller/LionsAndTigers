@@ -12,13 +12,12 @@
 
 @optional
 
--(IBAction)topButtonTapped:(id)sender;
+-(void)topButtonTapped:(id)sender;
 
 @end
 
 @interface TopViewController : UIViewController
 
 @property (nonatomic, assign) id <TopDelegate> delegate;
-@property BOOL movecontroller;
 
 @end

@@ -18,13 +18,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
--(void)onTopButtonTapped: (id)sender {
 
-}
 
 - (IBAction)topViewButtonTapped:(id)sender {
-    self.movecontroller = !self.movecontroller;
-    
+    [self.delegate topButtonTapped:sender];
 }
 
 

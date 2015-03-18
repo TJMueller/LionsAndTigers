@@ -24,16 +24,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tvc = [TopViewController new];
-    self.hvc = [HUDViewController new];
-    self.tvc.delegate = self;
-    self.hvc.delegate = self;
+    NSLog(@"%lu",(unsigned long)self.view.subviews.count);
+
+    self.tvc = self.view.subviews[0];
+    //self.hvc = self.view.subviews[2];
+    //self.tvc.delegate = self;
+    //self.hvc.delegate = self;
+//    self.tvc.delegate = self;
 }
 
 
 
 -(void)topButtonTapped:(id)sender {
+
     [self showHudView];
+    NSLog(@"BOIIIIII");
     
 }
 
