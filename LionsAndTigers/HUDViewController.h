@@ -14,7 +14,6 @@
 -(void)tigersButtonTapped:(id)identifier didTapButton:(UIButton *)button;
 -(void)lionsButtonTapped:(id)identifier didTapButton:(UIButton *)button;
 
-
 @end
 
 @interface HUDViewController : UIViewController

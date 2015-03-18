@@ -10,6 +10,7 @@
 		23134FBF1ABA064900BAB7CD /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23134FBE1ABA064900BAB7CD /* RootViewController.m */; };
 		23134FC21ABA073200BAB7CD /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23134FC11ABA073200BAB7CD /* TopViewController.m */; };
 		23134FC51ABA073900BAB7CD /* HUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23134FC41ABA073900BAB7CD /* HUDViewController.m */; };
+		23134FC81ABA348800BAB7CD /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23134FC71ABA348800BAB7CD /* CustomCollectionViewCell.m */; };
 		231F2B181ABA040000E804AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 231F2B171ABA040000E804AC /* main.m */; };
 		231F2B1B1ABA040000E804AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 231F2B1A1ABA040000E804AC /* AppDelegate.m */; };
 		231F2B211ABA040000E804AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231F2B1F1ABA040000E804AC /* Main.storyboard */; };
@@ -35,6 +36,8 @@
 		23134FC11ABA073200BAB7CD /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopViewController.m; sourceTree = "<group>"; };
 		23134FC31ABA073900BAB7CD /* HUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDViewController.h; sourceTree = "<group>"; };
 		23134FC41ABA073900BAB7CD /* HUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDViewController.m; sourceTree = "<group>"; };
+		23134FC61ABA348800BAB7CD /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		23134FC71ABA348800BAB7CD /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 		231F2B121ABA040000E804AC /* LionsAndTigers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LionsAndTigers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		231F2B161ABA040000E804AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		231F2B171ABA040000E804AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 				23134FBD1ABA064900BAB7CD /* RootViewController.h */,
 				23134FBE1ABA064900BAB7CD /* RootViewController.m */,
 				231F2B1F1ABA040000E804AC /* Main.storyboard */,
+				23134FC61ABA348800BAB7CD /* CustomCollectionViewCell.h */,
+				23134FC71ABA348800BAB7CD /* CustomCollectionViewCell.m */,
 				231F2B221ABA040000E804AC /* Images.xcassets */,
 				231F2B241ABA040000E804AC /* LaunchScreen.xib */,
 				231F2B151ABA040000E804AC /* Supporting Files */,
@@ -232,6 +237,7 @@
 				23134FC51ABA073900BAB7CD /* HUDViewController.m in Sources */,
 				23134FC21ABA073200BAB7CD /* TopViewController.m in Sources */,
 				231F2B1B1ABA040000E804AC /* AppDelegate.m in Sources */,
+				23134FC81ABA348800BAB7CD /* CustomCollectionViewCell.m in Sources */,
 				231F2B181ABA040000E804AC /* main.m in Sources */,
 				23134FBF1ABA064900BAB7CD /* RootViewController.m in Sources */,
 			);

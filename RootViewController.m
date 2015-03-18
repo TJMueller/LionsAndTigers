@@ -18,7 +18,6 @@
 @property TopViewController *tvc;
 @property HUDViewController *hvc;
 @property BOOL shouldShowHUDView;
-//@property UINavigationController *tvc;
 
 @end
 
@@ -26,17 +25,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%lu",(unsigned long)self.childViewControllers.count);
+//had to tell TopViewController where RootViewController was
+//so we had to first look at the childview of RootViewController which is a UINavigationController
 
-    NSLog(@"class == %@", [self.childViewControllers[0] class]);
-    NSLog(@"class == %@", [self.childViewControllers[1] class]);
+    //we had to make a UINavigationController variable called firstChild to hold it
     UINavigationController* firstChild = self.childViewControllers[1];
-    NSLog(@"class == %@", [firstChild.childViewControllers[0] class]);
-
+    //then we had to take the child of the first child which was the TopViewController
     self.tvc = firstChild.childViewControllers[0];
-    //self.tvc.delegate = self;
-    //self.hvc.delegate = self;
+    //so here we set the delegate of the TopViewController to RootViewController
     self.tvc.delegate = self;
+
+    self.hvc = self.childViewControllers[0];
+    self.hvc.delegate = self;
+
+
+//    NSLog(@"%lu",(unsigned long)self.childViewControllers.count);
+//    NSLog(@"class == %@", [self.childViewControllers[0] class]);
+//    NSLog(@"class == %@", [self.childViewControllers[1] class]);
+//    NSLog(@"class == %@", [firstChild.childViewControllers[0] class]);
 }
 
 
@@ -54,7 +60,7 @@
 
 -(void)showHudView {
     [self.view layoutIfNeeded];
-    self.firstLeftConstraint.constant = 100;
+    self.firstLeftConstraint.constant = 70;
     self.shouldShowHUDView =!self.shouldShowHUDView;
 
 }

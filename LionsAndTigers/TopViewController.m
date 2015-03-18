@@ -8,7 +8,7 @@
 
 #import "TopViewController.h"
 
-@interface TopViewController ()
+@interface TopViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @end
 
@@ -24,6 +24,31 @@
     [self.delegate topButtonTapped:sender];
 }
 
+//- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section;{
+//    return 1;
+//
+//}
+//
+//
+//- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;{
+//
+//    UICollectionViewCell *cell =[collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+//    return cell;
+//}
+
+- (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
+    return 3;
+}
+// 2
+- (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
+    return 1;
+}
+// 3
+- (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor whiteColor];
+    return cell;
+}
 
 
 @end
