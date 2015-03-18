@@ -10,6 +10,8 @@
 #import "CustomCollectionViewCell.h"
 
 @interface TopViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
+
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionViewOutlet;
 @property NSArray *lions;
 @property NSArray *tigers;
 @end
@@ -22,6 +24,8 @@
 
     self.lions = [NSArray arrayWithObjects:[UIImage imageNamed:@"Image-5"], [UIImage imageNamed:@"Image-4"], [UIImage imageNamed:@"Image-3"], nil];
       self.tigers = [NSArray arrayWithObjects:[UIImage imageNamed:@"Image"], [UIImage imageNamed:@"Image-1"], [UIImage imageNamed:@"Image-2"], nil];
+    [self.collectionViewOutlet reloadData];
+
 }
 
 
@@ -51,9 +55,10 @@
 // 3
 - (CustomCollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CustomCollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    
+    cell.cellImageViewOutlet.image = [UIImage imageNamed:@"tiger"];
     return cell;
 }
+
 
 
 @end
