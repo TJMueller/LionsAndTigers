@@ -8,6 +8,7 @@
 
 #import "TopViewController.h"
 #import "CustomCollectionViewCell.h"
+#import "RootViewController.h"
 
 @interface TopViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -22,11 +23,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    self.lions = [NSArray arrayWithObjects:[UIImage imageNamed:@"Image-5"], [UIImage imageNamed:@"Image-4"], [UIImage imageNamed:@"Image-3"], nil];
-      self.tigers = [NSArray arrayWithObjects:[UIImage imageNamed:@"Image"], [UIImage imageNamed:@"Image-1"], [UIImage imageNamed:@"Image-2"], nil];
+    self.lions = [NSArray arrayWithObjects:[UIImage imageNamed:@"lion0"], [UIImage imageNamed:@"lion1"], [UIImage imageNamed:@"lion2"], nil];
+      self.tigers = [NSArray arrayWithObjects:[UIImage imageNamed:@"tiger"], [UIImage imageNamed:@"tiger1"], [UIImage imageNamed:@"tiger2"], nil];
     [self.collectionViewOutlet reloadData];
 
 }
+
 
 
 - (IBAction)topViewButtonTapped:(id)sender {
@@ -55,7 +57,11 @@
 // 3
 - (CustomCollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CustomCollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.cellImageViewOutlet.image = [UIImage imageNamed:@"tiger"];
+
+
+
+
+    //cell.cellImageViewOutlet.image = [UIImage imageNamed:@"tiger"];
     return cell;
 }
 
