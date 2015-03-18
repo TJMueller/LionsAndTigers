@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23134FBF1ABA064900BAB7CD /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23134FBE1ABA064900BAB7CD /* RootViewController.m */; };
+		23134FC21ABA073200BAB7CD /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23134FC11ABA073200BAB7CD /* TopViewController.m */; };
+		23134FC51ABA073900BAB7CD /* HUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23134FC41ABA073900BAB7CD /* HUDViewController.m */; };
 		231F2B181ABA040000E804AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 231F2B171ABA040000E804AC /* main.m */; };
 		231F2B1B1ABA040000E804AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 231F2B1A1ABA040000E804AC /* AppDelegate.m */; };
-		231F2B1E1ABA040000E804AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231F2B1D1ABA040000E804AC /* ViewController.m */; };
 		231F2B211ABA040000E804AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231F2B1F1ABA040000E804AC /* Main.storyboard */; };
 		231F2B231ABA040000E804AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 231F2B221ABA040000E804AC /* Images.xcassets */; };
 		231F2B261ABA040000E804AC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 231F2B241ABA040000E804AC /* LaunchScreen.xib */; };
@@ -27,13 +29,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23134FBD1ABA064900BAB7CD /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ../RootViewController.h; sourceTree = "<group>"; };
+		23134FBE1ABA064900BAB7CD /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ../RootViewController.m; sourceTree = "<group>"; };
+		23134FC01ABA073200BAB7CD /* TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopViewController.h; sourceTree = "<group>"; };
+		23134FC11ABA073200BAB7CD /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopViewController.m; sourceTree = "<group>"; };
+		23134FC31ABA073900BAB7CD /* HUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDViewController.h; sourceTree = "<group>"; };
+		23134FC41ABA073900BAB7CD /* HUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDViewController.m; sourceTree = "<group>"; };
 		231F2B121ABA040000E804AC /* LionsAndTigers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LionsAndTigers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		231F2B161ABA040000E804AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		231F2B171ABA040000E804AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		231F2B191ABA040000E804AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		231F2B1A1ABA040000E804AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		231F2B1C1ABA040000E804AC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		231F2B1D1ABA040000E804AC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		231F2B201ABA040000E804AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		231F2B221ABA040000E804AC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		231F2B251ABA040000E804AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -83,8 +89,12 @@
 			children = (
 				231F2B191ABA040000E804AC /* AppDelegate.h */,
 				231F2B1A1ABA040000E804AC /* AppDelegate.m */,
-				231F2B1C1ABA040000E804AC /* ViewController.h */,
-				231F2B1D1ABA040000E804AC /* ViewController.m */,
+				23134FC01ABA073200BAB7CD /* TopViewController.h */,
+				23134FC11ABA073200BAB7CD /* TopViewController.m */,
+				23134FC31ABA073900BAB7CD /* HUDViewController.h */,
+				23134FC41ABA073900BAB7CD /* HUDViewController.m */,
+				23134FBD1ABA064900BAB7CD /* RootViewController.h */,
+				23134FBE1ABA064900BAB7CD /* RootViewController.m */,
 				231F2B1F1ABA040000E804AC /* Main.storyboard */,
 				231F2B221ABA040000E804AC /* Images.xcassets */,
 				231F2B241ABA040000E804AC /* LaunchScreen.xib */,
@@ -219,9 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				231F2B1E1ABA040000E804AC /* ViewController.m in Sources */,
+				23134FC51ABA073900BAB7CD /* HUDViewController.m in Sources */,
+				23134FC21ABA073200BAB7CD /* TopViewController.m in Sources */,
 				231F2B1B1ABA040000E804AC /* AppDelegate.m in Sources */,
 				231F2B181ABA040000E804AC /* main.m in Sources */,
+				23134FBF1ABA064900BAB7CD /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +424,7 @@
 				231F2B371ABA040100E804AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		231F2B381ABA040100E804AC /* Build configuration list for PBXNativeTarget "LionsAndTigersTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +433,7 @@
 				231F2B3A1ABA040100E804AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
