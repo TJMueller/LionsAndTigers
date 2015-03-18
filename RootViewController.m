@@ -17,6 +17,8 @@
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *firstLeftConstraint;
 @property TopViewController *tvc;
 @property HUDViewController *hvc;
+@property BOOL shouldShowHUDView;
+//@property UINavigationController *tvc;
 
 @end
 
@@ -24,27 +26,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%lu",(unsigned long)self.view.subviews.count);
+    NSLog(@"%lu",(unsigned long)self.childViewControllers.count);
 
-    self.tvc = self.view.subviews[0];
-    //self.hvc = self.view.subviews[2];
+    NSLog(@"class == %@", [self.childViewControllers[0] class]);
+    NSLog(@"class == %@", [self.childViewControllers[1] class]);
+    UINavigationController* firstChild = self.childViewControllers[1];
+    NSLog(@"class == %@", [firstChild.childViewControllers[0] class]);
+
+    self.tvc = firstChild.childViewControllers[0];
     //self.tvc.delegate = self;
     //self.hvc.delegate = self;
-//    self.tvc.delegate = self;
+    self.tvc.delegate = self;
 }
 
 
 
 -(void)topButtonTapped:(id)sender {
-
-    [self showHudView];
-    NSLog(@"BOIIIIII");
-    
+    if (self.shouldShowHUDView == false) {
+        [self showHudView];
+        NSLog(@"BOIIIIII");
+    }else{
+        [self.view layoutIfNeeded];
+        self.firstLeftConstraint.constant = -16;
+        self.shouldShowHUDView =!self.shouldShowHUDView;
+    }
 }
 
 -(void)showHudView {
     [self.view layoutIfNeeded];
     self.firstLeftConstraint.constant = 100;
+    self.shouldShowHUDView =!self.shouldShowHUDView;
 
 }
 
