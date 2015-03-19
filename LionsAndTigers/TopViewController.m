@@ -39,6 +39,13 @@
 -(void)lionButtonTapped:(id)sender {
     self.shouldIWork = true;
     NSLog(@"it fucking works");
+    [self.collectionViewOutlet reloadData];
+}
+
+-(void)tigerButtonTapped:(id)sender{
+    self.shouldIWork = false;
+    [self.collectionViewOutlet reloadData];
+
 }
 
 - (IBAction)topViewButtonTapped:(id)sender {
@@ -67,13 +74,28 @@
 // 3
 - (CustomCollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CustomCollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    if(self.shouldIWork)
+    {
+        cell.cellImageViewOutlet.image = [self.lions objectAtIndex:indexPath.row];
+        return cell;
+    }
+    else
+    {
+        cell.cellImageViewOutlet.image = [self.tigers objectAtIndex:indexPath.row];
+        return cell;
+    }
 
+
+//    cell.cellImageViewOutlet.image = [UIImage imageNamed:@"tiger1"];
+//    return cell;
+
+}
 
 
 
     //cell.cellImageViewOutlet.image = [UIImage imageNamed:@"tiger"];
-    return cell;
-}
+   // return cell;
+
 
 
 
