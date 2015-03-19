@@ -14,7 +14,6 @@
 -(void)tigerButtonTapped:(id)sender;
 -(void)lionButtonTapped:(id)sender;
 
-
 @end
 
 @interface HUDViewController : UIViewController

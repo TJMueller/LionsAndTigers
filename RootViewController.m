@@ -25,57 +25,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//had to tell TopViewController where RootViewController was
-//so we had to first look at the childview of RootViewController which is a UINavigationController
 
+    //had to tell TopViewController where RootViewController was
+    //so we had to first look at the childview of RootViewController which is a UINavigationController
     //we had to make a UINavigationController variable called firstChild to hold it
     UINavigationController* firstChild = self.childViewControllers[1];
     //then we had to take the child of the first child which was the TopViewController
     self.tvc = firstChild.childViewControllers[0];
     //so here we set the delegate of the TopViewController to RootViewController
     self.tvc.delegate = self;
-
     self.hvc = self.childViewControllers[0];
     self.hvc.delegate = self;
     self.shouldIShowLions = false;
-
-
-//    NSLog(@"%lu",(unsigned long)self.childViewControllers.count);
-//    NSLog(@"class == %@", [self.childViewControllers[0] class]);
-//    NSLog(@"class == %@", [self.childViewControllers[1] class]);
-//    NSLog(@"class == %@", [firstChild.childViewControllers[0] class]);
 }
 
-
-
--(void)topButtonTapped:(id)sender {
+-(void)topButtonTapped:(id)sender { //method from the topview that we are getting from .h
     if (self.shouldShowHUDView == false) {
-        [self showHudView];
-        NSLog(@"BOIIIIII");
+        [self showHudView]; // says if they didn't push button, stuff is normal
     }else{
-        [self.view layoutIfNeeded];
-        self.firstLeftConstraint.constant = -16;
+        [self.view layoutIfNeeded]; //
+        self.firstLeftConstraint.constant = -16; //moves it back over
         self.shouldShowHUDView =!self.shouldShowHUDView;
     }
 }
 
 -(void)showHudView {
     [self.view layoutIfNeeded];
-    self.firstLeftConstraint.constant = 70;
+    self.firstLeftConstraint.constant = 70; //moves it to the right
     self.shouldShowHUDView =!self.shouldShowHUDView;
 
 }
-
--(void)lionButtonTapped:(id)sender
-{
-    self.shouldIShowLions = true;
-}
-
--(void)tigerButtonTapped:(id)sender
-{
-    self.shouldIShowLions = false;
-}
-
-
 
 @end

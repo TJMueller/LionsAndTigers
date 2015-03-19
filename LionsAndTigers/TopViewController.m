@@ -23,59 +23,50 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 
+    //creating our arrays here:
     self.lions = [NSArray arrayWithObjects:[UIImage imageNamed:@"lion0"], [UIImage imageNamed:@"lion1"], [UIImage imageNamed:@"lion2"], nil];
       self.tigers = [NSArray arrayWithObjects:[UIImage imageNamed:@"tiger"], [UIImage imageNamed:@"tiger1"], [UIImage imageNamed:@"tiger2"], nil];
     [self.collectionViewOutlet reloadData];
+
+    //this is our complicated way of accessing a view controller many viewcontrollers away
     UIViewController *temp = self.parentViewController;
     UIViewController *temp2 = temp.parentViewController;
     HUDViewController *temp3 = temp2.childViewControllers[0];
-    NSLog(@"%@ into %@ back into %@" , [temp class],[temp2 class], [temp3 class]);
+//    NSLog(@"%@ into %@ back into %@" , [temp class],[temp2 class], [temp3 class]);
+    //delegating the result of our pathway:
     temp3.delegate = self;
 
 }
 
 -(void)lionButtonTapped:(id)sender {
-    self.shouldIWork = true;
-    NSLog(@"it fucking works");
+    self.shouldIWork = true; // should i work is our boolean for which images to use
     [self.collectionViewOutlet reloadData];
 }
 
 -(void)tigerButtonTapped:(id)sender{
-    self.shouldIWork = false;
+    self.shouldIWork = false; // should i work is our boolean for which images to use
     [self.collectionViewOutlet reloadData];
 
 }
 
+//this is our sandwich view button that connects to the root
 - (IBAction)topViewButtonTapped:(id)sender {
     [self.delegate topButtonTapped:sender];
 }
 
-//- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section;{
-//    return 1;
-//
-//}
-//
-//
-//- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;{
-//
-//    UICollectionViewCell *cell =[collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-//    return cell;
-//}
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
     return 3;
+    //says how many cells to show
 }
-// 2
-- (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
-    return 1;
-}
-// 3
+
 - (CustomCollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CustomCollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    //this is where we say what's in our cell
+
     if(self.shouldIWork)
-    {
+    {   //if bool, then lions
         cell.cellImageViewOutlet.image = [self.lions objectAtIndex:indexPath.row];
         return cell;
     }
@@ -84,19 +75,6 @@
         cell.cellImageViewOutlet.image = [self.tigers objectAtIndex:indexPath.row];
         return cell;
     }
-
-
-//    cell.cellImageViewOutlet.image = [UIImage imageNamed:@"tiger1"];
-//    return cell;
-
 }
-
-
-
-    //cell.cellImageViewOutlet.image = [UIImage imageNamed:@"tiger"];
-   // return cell;
-
-
-
 
 @end

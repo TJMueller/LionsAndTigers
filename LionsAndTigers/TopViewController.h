@@ -12,7 +12,7 @@
 
 @optional
 
--(void)topButtonTapped:(id)sender;
+-(void)topButtonTapped:(id)sender; //sandwich button
 
 @end
 
